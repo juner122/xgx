@@ -2,9 +2,9 @@ package com.example.xgx;
 
 
 /**
- * 主页页面：扫描
+ * 主页页面：我的
  */
-public class MainFragment5 extends BaseFragment {
+public class MainFragment4 extends BaseFragment {
 
     @Override
     public int setLayoutResourceID() {

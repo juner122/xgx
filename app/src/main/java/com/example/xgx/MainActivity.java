@@ -39,8 +39,8 @@ public class MainActivity extends BaseActivity {
         }
         mFragments.add(new MainFragment1());
         mFragments.add(new MainFragment2());
-        mFragments.add(new MainFragment1());
-        mFragments.add(new MainFragment1());
+        mFragments.add(new MainFragment3());
+        mFragments.add(new MainFragment4());
         mFragments.add(new MainFragment5());
 
 
