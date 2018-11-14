@@ -32,6 +32,11 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    protected void init() {
+
+    }
+
+    @Override
     public void setUpView() {
 
         for (int i = 0; i < mTitles.length; i++) {

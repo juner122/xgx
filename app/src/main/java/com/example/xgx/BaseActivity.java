@@ -13,11 +13,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         //设置布局
         setContentView(setLayoutResourceID());
         ButterKnife.bind(this);
-
+        init();
         //初始化控件
         setUpView();
 
     }
+
+    protected abstract void init();
+
     /**
      * 一些View的相关操作
      */
