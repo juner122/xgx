@@ -14,27 +14,11 @@ public class ProductListActivity extends BaseActivity {
     @BindView(R.id.rg_type)
     RadioGroup radioGroup;
 
-    @BindView(R.id.tv_ok)
-    TextView tv_ok;
-
-
     ProductListFragment fragment;
-
-    private final String[] mTitles = {
-            "常用商品", "轮胎", "汽车滤芯"
-            , "养护", "车载电器", "内饰精品", "制动系统", "空调系统", "冷却系统", "自定义商品"
-    };
-
-
-
-
-
-
-
-
 
     @Override
     protected void init() {
+        tv_title.setText("商品列表");
         replaceFragment();
     }
 
@@ -76,6 +60,7 @@ public class ProductListActivity extends BaseActivity {
     public int setLayoutResourceID() {
         return R.layout.activity_product_list;
     }
+
 
 
 }

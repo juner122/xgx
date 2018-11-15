@@ -1,23 +1,53 @@
 package com.example.xgx;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+
 import android.view.View;
-import android.view.ViewGroup;
+
+import butterknife.OnClick;
 
 /**
  * 主页页面：工作台
- * */
+ */
 
-public class MainFragment1 extends Fragment {
+public class MainFragment1 extends BaseFragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment1_main, container,
-                false);
+    public int setLayoutResourceID() {
+        return R.layout.fragment1_main;
+    }
 
-        return rootView;
+    @Override
+    protected void setUpView() {
+
+    }
+
+
+    @OnClick({R.id.but_top1, R.id.but_top2, R.id.but_top3, R.id.but_top4, R.id.rv_button_bill, R.id.rv_order_count, R.id.rv_new_members})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.but_top1:
+                toActivity(MemberManagementActivity.class);
+                break;
+            case R.id.but_top2:
+                toActivity(StaffManagementActivity.class);
+                break;
+            case R.id.but_top3:
+                toActivity(ProductListActivity.class);
+                break;
+            case R.id.but_top4:
+                toActivity(ActivityPackageListActivity.class);
+                break;
+            case R.id.rv_button_bill:
+                toActivity(BillListActivity.class);
+                break;
+            case R.id.rv_order_count:
+                ((MainActivity) getActivity()).setCurrentTab(1);
+                break;
+            case R.id.rv_new_members:
+                toActivity(MemberManagementActivity.class);
+                break;
+
+        }
+
     }
 }

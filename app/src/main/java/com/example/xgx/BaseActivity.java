@@ -1,23 +1,48 @@
 package com.example.xgx;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
 public abstract class BaseActivity extends AppCompatActivity {
+
+    @BindView(R.id.tv_title)
+    TextView tv_title;
+
+    @BindView(R.id.head_view)
+    View head_view;
+
+    private Unbinder mUnbinder;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //设置布局
         setContentView(setLayoutResourceID());
-        ButterKnife.bind(this);
+
+        mUnbinder = ButterKnife.bind(this);
         init();
+
         //初始化控件
         setUpView();
 
+
     }
+
+
+    @OnClick(R.id.tv_back)
+    protected void onClick() {
+        finish();
+    }
+
 
     protected abstract void init();
 
@@ -32,5 +57,23 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @return 布局文件资源ID
      */
     public abstract int setLayoutResourceID();
+
+    protected void hideHeadView() {
+        head_view.setVisibility(View.GONE);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mUnbinder.unbind();
+    }
+
+    protected void toActivity(Class c) {
+
+        startActivity(new Intent(this, c));
+
+
+    }
+
 
 }

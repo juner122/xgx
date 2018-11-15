@@ -16,6 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MemberManagementActivity" />
+        <activity android:name=".StaffManagementActivity" />
+        <activity android:name=".ProductListActivity" />
+        <activity android:name=".ActivityPackageListActivity" />
+        <activity android:name=".BillListActivity" />
+        <activity android:name=".MemberInfoInputActivity" />
+        <activity android:name=".CarInfoInputActivity" />
+        <activity android:name=".MakeOrderActivity" />
+        <activity android:name=".MealListActivity" />
+        <activity android:name=".TechnicianListActivity" />
+        <activity android:name=".MakeOrderSuccessActivity" />
+        <activity android:name=".OrderPayActivity" />
+        <activity android:name=".OrderDoneActivity"></activity>
     </application>
 
 </manifest>

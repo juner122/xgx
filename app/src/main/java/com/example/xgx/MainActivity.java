@@ -1,7 +1,6 @@
 package com.example.xgx;
 
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
@@ -26,14 +25,10 @@ public class MainActivity extends BaseActivity {
             R.mipmap.icon_bottom_button1_select, R.mipmap.icon_bottom_button2_select,
             R.mipmap.icon_bottom_button3_select, R.mipmap.icon_bottom_button4_select, R.mipmap.icon_bottom_button5_select};
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     protected void init() {
-
+        hideHeadView();
     }
 
     @Override
@@ -50,7 +45,7 @@ public class MainActivity extends BaseActivity {
 
 
         commonTabLayout.setTabData(mTabEntities, this, R.id.fragment, mFragments);
-        commonTabLayout.setCurrentTab(0);
+        setCurrentTab(0);
 
     }
 
@@ -58,6 +53,7 @@ public class MainActivity extends BaseActivity {
     public int setLayoutResourceID() {
         return R.layout.activity_main;
     }
+
 
     class TabEntity implements CustomTabEntity {
         public String title;
@@ -84,6 +80,10 @@ public class MainActivity extends BaseActivity {
         public int getTabUnselectedIcon() {
             return unSelectedIcon;
         }
+    }
+
+    public void setCurrentTab(int i) {
+        commonTabLayout.setCurrentTab(i);
     }
 
 }

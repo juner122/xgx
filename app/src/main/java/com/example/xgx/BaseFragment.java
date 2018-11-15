@@ -1,6 +1,7 @@
 package com.example.xgx;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -36,5 +37,12 @@ public abstract class BaseFragment extends Fragment {
      */
     protected abstract void setUpView();
 
+
+    protected void toActivity(Class c) {
+
+        startActivity(new Intent(getContext(), c));
+
+
+    }
 
 }

@@ -133,6 +133,7 @@
                     android:textSize="12sp" />
 
                 <TextView
+                    android:id="@+id/tv_add_car"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -175,6 +176,7 @@
                     android:textSize="12sp" />
 
                 <TextView
+                    android:id="@+id/tv_to_car_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -189,6 +191,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tv_to_make_order"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -199,7 +202,7 @@
                     android:paddingTop="7dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="7dp"
-                    android:text="添加车辆"
+                    android:text="前往下单"
                     android:textColor="#ff000000"
                     android:textSize="14sp" />
 

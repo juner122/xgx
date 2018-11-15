@@ -188,9 +188,11 @@
                         android:textColor="#ff000000"
                         android:textSize="14sp" />
 
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/but_product_list"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_check_selector"
                         android:padding="10dp"
                         android:src="@mipmap/icon_add" />
                 </LinearLayout>
@@ -238,9 +240,11 @@
                         android:textColor="#ff000000"
                         android:textSize="14sp" />
 
-                    <ImageView
+                    <ImageButton
+                        android:id="@+id/but_meal_list"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_check_selector"
                         android:padding="10dp"
                         android:src="@mipmap/icon_add" />
                 </LinearLayout>
@@ -252,7 +256,7 @@
 
                 <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"  />
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
             <LinearLayout
@@ -277,6 +281,7 @@
                         android:textSize="14sp" />
 
                     <TextView
+                        android:id="@+id/but_to_technician_list"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -316,6 +321,7 @@
                         android:textSize="14sp" />
 
                     <TextView
+                        android:id="@+id/but_set_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -426,6 +432,7 @@
             android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/but_enter_order"
             android:layout_width="130dp"
             android:layout_height="40dp"
             android:background="@drawable/button_background_c"
