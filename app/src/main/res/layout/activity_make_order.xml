@@ -36,37 +36,26 @@
                 android:orientation="horizontal"
                 android:padding="10dp">
 
-                <LinearLayout
+                <CheckedTextView
+                    android:id="@+id/bto_top1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#fff"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp">
-
-                    <ImageView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/icon_xiche" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:text="洗车"
-                        android:textColor="#ff000000"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
+                    android:background="@drawable/button_check_selector"
+                    android:drawableTop="@mipmap/icon_xiche"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:padding="15dp"
+                    android:text="洗车"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
 
                 <View
                     android:layout_width="10dp"
                     android:layout_height="1dp" />
 
                 <LinearLayout
+                    android:id="@+id/bto_top2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -97,6 +86,7 @@
                     android:layout_height="1dp" />
 
                 <LinearLayout
+                    android:id="@+id/bto_top3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -127,6 +117,7 @@
                     android:layout_height="1dp" />
 
                 <LinearLayout
+                    android:id="@+id/bto_top4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

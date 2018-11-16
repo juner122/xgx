@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.xgx.api.RetrofitClient;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -21,6 +23,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private Unbinder mUnbinder;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +37,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         //初始化控件
         setUpView();
 
-
     }
 
+    public RetrofitClient Api() {
+        return RetrofitClient.getInstance(this);
+
+    }
 
     @OnClick(R.id.tv_back)
     protected void onClick() {

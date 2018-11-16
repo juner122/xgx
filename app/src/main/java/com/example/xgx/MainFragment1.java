@@ -19,6 +19,9 @@ public class MainFragment1 extends BaseFragment {
     @Override
     protected void setUpView() {
 
+
+
+
     }
 
 
