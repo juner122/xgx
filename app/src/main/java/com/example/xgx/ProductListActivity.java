@@ -46,6 +46,11 @@ public class ProductListActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void setUpData() {
+
+    }
+
     private void replaceFragment() {
 
 

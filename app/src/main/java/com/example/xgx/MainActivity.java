@@ -51,6 +51,11 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    protected void setUpData() {
+
+    }
+
+    @Override
     public int setLayoutResourceID() {
         return R.layout.activity_main;
     }

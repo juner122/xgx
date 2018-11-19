@@ -16,6 +16,11 @@ public class MemberManagementActivity extends BaseActivity {
     }
 
     @Override
+    protected void setUpData() {
+
+    }
+
+    @Override
     public int setLayoutResourceID() {
         return R.layout.activity_member_management;
     }

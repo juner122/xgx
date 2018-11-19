@@ -20,6 +20,11 @@ public class MakeOrderSuccessActivity extends BaseActivity {
     }
 
     @Override
+    protected void setUpData() {
+
+    }
+
+    @Override
     public int setLayoutResourceID() {
         return R.layout.activity_make_order_success;
     }

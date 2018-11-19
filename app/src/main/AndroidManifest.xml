@@ -31,6 +31,7 @@
         <activity android:name=".MakeOrderSuccessActivity" />
         <activity android:name=".OrderPayActivity" />
         <activity android:name=".OrderDoneActivity" />
+        <activity android:name=".MyBalanceActivity"></activity>
     </application>
 
 </manifest>

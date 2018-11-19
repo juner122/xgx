@@ -1,11 +1,16 @@
 package com.example.xgx.api;
 
 import android.content.Context;
+import android.util.Log;
 
+import com.example.xgx.util.ToastUtil;
 import com.tamic.novate.BaseSubscriber;
 import com.tamic.novate.Throwable;
 
-public class MySubscriber<T> extends BaseSubscriber<T> implements ProgressCancelListener {
+import java.net.ConnectException;
+
+
+public class MySubscriber<T> extends BaseSubscriber implements ProgressCancelListener {
 
 
     private SubscribeOnNextListener mOnNextListener;
@@ -60,16 +65,27 @@ public class MySubscriber<T> extends BaseSubscriber<T> implements ProgressCancel
         dismissProgressDialog();
     }
 
+    /**
+     * 对错误进行统一处理
+     * 隐藏ProgressDialog
+     * @param e
+     */
     @Override
     public void onError(Throwable e) {
+
+
+        ToastUtil.ToastCenter(e.getMessage());
+        e.printStackTrace();
         dismissProgressDialog();
-        mOnNextListener.onError(e);
 
     }
 
     @Override
     public void onNext(Object o) {
-        mOnNextListener.onNext(o);
+        if (mOnNextListener != null) {
+            Log.d("MySubscriber", "onNext------>" + o.toString());
+            mOnNextListener.onNext(o);
+        }
     }
 
     @Override

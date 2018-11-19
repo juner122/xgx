@@ -4,8 +4,11 @@ package com.example.xgx.api;
 import android.support.annotation.Nullable;
 
 import com.example.xgx.bean.BaseBean;
+import com.example.xgx.bean.BillEntity;
+import com.example.xgx.bean.MyBalanceEntity;
 import com.example.xgx.bean.UserInfo;
 
+import java.lang.annotation.Documented;
 import java.util.Map;
 
 import okhttp3.ResponseBody;
@@ -23,9 +26,23 @@ public interface ApiService {
 
 
 
+
     @POST("user/getInfo")
     @FormUrlEncoded
     Observable<BaseBean<UserInfo>> getUserInfo(@FieldMap Map<String, Object> maps);
+
+
+    @POST("userbalance/getInfo")
+    @FormUrlEncoded
+    Observable<BaseBean<MyBalanceEntity>> getUserBalanceInfo(@FieldMap Map<String, Object> maps);
+
+
+
+    //账单列表
+    @POST("userbalancedetail/list")
+    @FormUrlEncoded
+    Observable<BaseBean<BillEntity>> getUserBillList(@FieldMap Map<String, Object> maps);
+
 
 
     @POST("getPhoneCode")

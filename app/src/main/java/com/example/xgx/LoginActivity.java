@@ -38,6 +38,11 @@ public class LoginActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void setUpData() {
+
+    }
+
 
     @Override
     public int setLayoutResourceID() {
@@ -57,15 +62,13 @@ public class LoginActivity extends BaseActivity {
                         .take(61)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread());
-                MySubscriber mySubscriber = new MySubscriber<>(this, new SubscribeOnNextListener<BaseBean<UserInfo>>() {
+                MySubscriber mySubscriber = new MySubscriber<>(this, new SubscribeOnNextListener<UserInfo>() {
                     @Override
-                    public void onNext(BaseBean<UserInfo> responseBody) {
-                        Log.d("getUserInfo", "onNext->" + responseBody.toString());
+                    public void onNext(UserInfo responseBody) {
 
                         observable.subscribe(new Action1<Long>() {
                             @Override
                             public void call(Long aLong) {
-                                Log.d("interval", "onNext->" + aLong);
 
                                 Long l = 59 - aLong;
 
@@ -84,12 +87,6 @@ public class LoginActivity extends BaseActivity {
                             }
                         });
                     }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        Log.e("getUserInfo", "onError->" + e.getMessage());
-                    }
-
                 });
                 Api().getUserInfo(mySubscriber, "1");
 

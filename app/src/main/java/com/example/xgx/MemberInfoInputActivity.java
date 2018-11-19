@@ -18,6 +18,11 @@ public class MemberInfoInputActivity extends BaseActivity {
     }
 
     @Override
+    protected void setUpData() {
+
+    }
+
+    @Override
     public int setLayoutResourceID() {
         return R.layout.activity_member_info_input;
     }

@@ -14,6 +14,11 @@ public class OrderDoneActivity extends BaseActivity {
     }
 
     @Override
+    protected void setUpData() {
+
+    }
+
+    @Override
     public int setLayoutResourceID() {
         return R.layout.activity_order_done;
     }

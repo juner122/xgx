@@ -1,8 +1,5 @@
 package com.example.xgx;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.TextView;
 
 public class ActivityPackageListActivity extends BaseActivity {
 
@@ -13,6 +10,11 @@ public class ActivityPackageListActivity extends BaseActivity {
 
     @Override
     protected void setUpView() {
+
+    }
+
+    @Override
+    protected void setUpData() {
 
     }
 

@@ -16,6 +16,11 @@ public class StaffManagementActivity extends BaseActivity {
     }
 
     @Override
+    protected void setUpData() {
+
+    }
+
+    @Override
     public int setLayoutResourceID() {
         return R.layout.activity_staff_management;
     }

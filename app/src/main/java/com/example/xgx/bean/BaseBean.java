@@ -3,16 +3,16 @@ package com.example.xgx.bean;
 public class BaseBean<T> {
 
 
-    String errno;
+    int errno;
     String errmsg;
 
     T data;
 
-    public String getErrno() {
+    public int getErrno() {
         return errno;
     }
 
-    public void setErrno(String errno) {
+    public void setErrno(int errno) {
         this.errno = errno;
     }
 

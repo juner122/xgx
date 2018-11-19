@@ -59,9 +59,10 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/tv_my_balance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff"
+        android:background="@drawable/button_check_selector"
         android:drawableLeft="@mipmap/icon_my_balance"
         android:drawablePadding="29dp"
         android:gravity="center_vertical"

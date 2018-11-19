@@ -37,6 +37,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         //初始化控件
         setUpView();
 
+        //初始化数据
+        setUpData();
+
     }
 
     public RetrofitClient Api() {
@@ -56,6 +59,8 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 一些View的相关操作
      */
     protected abstract void setUpView();
+
+    protected abstract void setUpData();
 
     /**
      * 此方法用于返回Fragment设置ContentView的布局文件资源ID

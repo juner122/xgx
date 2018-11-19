@@ -1,17 +1,14 @@
 package com.example.xgx;
 
 import android.view.View;
-import android.widget.CheckedTextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-;
-
 public class MakeOrderActivity extends BaseActivity {
 
     @BindView(R.id.bto_top1)
-    CheckedTextView ctv;
+    View view;
 
     @Override
     protected void init() {
@@ -21,8 +18,12 @@ public class MakeOrderActivity extends BaseActivity {
     @Override
     protected void setUpView() {
 
-        ctv.setCheckMarkDrawable(R.drawable.check_bok_background_a);
 
+
+    }
+
+    @Override
+    protected void setUpData() {
 
     }
 
