@@ -1,13 +1,13 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
 
-//员工管理
-public class StaffManagementActivity extends BaseActivity {
+import com.example.xgx.R;
+
+public class ActivityPackageListActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        tv_title.setText("员工列表");
-
+        tv_title.setText("活动列表");
     }
 
     @Override
@@ -22,7 +22,8 @@ public class StaffManagementActivity extends BaseActivity {
 
     @Override
     public int setLayoutResourceID() {
-        return R.layout.activity_staff_management;
+        return R.layout.activity_activity_package_list;
     }
+
 
 }

@@ -1,9 +1,7 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
 
 import android.app.DatePickerDialog;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -11,27 +9,23 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.loadmore.LoadMoreView;
+import com.example.xgx.R;
 import com.example.xgx.adapter.BillListAdpter;
 import com.example.xgx.api.MySubscriber;
 import com.example.xgx.api.SubscribeOnNextListener;
-import com.example.xgx.bean.BaseBean;
 import com.example.xgx.bean.BillEntity;
 import com.example.xgx.bean.BillEntityItem;
 import com.example.xgx.util.MathUtil;
 import com.example.xgx.view.DatePickerDialogUtil;
-import com.tamic.novate.Throwable;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.BindViews;
 import butterknife.OnClick;
 
 import static com.chad.library.adapter.base.BaseQuickAdapter.ALPHAIN;
-import static com.chad.library.adapter.base.BaseQuickAdapter.SCALEIN;
 
 public class BillListActivity extends BaseActivity {
 
@@ -56,12 +50,10 @@ public class BillListActivity extends BaseActivity {
     BillListAdpter adpter;
 
 
-
     int count;
     MySubscriber subscriber;
     DatePickerDialogUtil dialogUti1, dialogUti2;
     int y1, y2, m1, m2, d1, d2;
-
 
 
     @Override
@@ -73,6 +65,13 @@ public class BillListActivity extends BaseActivity {
         adpter = new BillListAdpter(list);
         adpter.openLoadAnimation(ALPHAIN);
         recyclerView.setAdapter(adpter);
+        adpter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                toActivity(BillListItemInfoActivity.class);
+            }
+        });
+
 
         subscriber = new MySubscriber<>(this, new SubscribeOnNextListener<BillEntity>() {
             @Override
@@ -88,8 +87,8 @@ public class BillListActivity extends BaseActivity {
             }
         });
 
-    }
 
+    }
 
 
     @Override
@@ -115,10 +114,8 @@ public class BillListActivity extends BaseActivity {
     //当DatePickerDialog关闭时，更新日期显示
     private void updateDate(TextView textView, int year, int month, int dayOfMonth) {
         //在TextView上显示日期
-
         textView.setText(String.valueOf(year + "-" + (month + 1) + "-" + dayOfMonth));
     }
-
 
 
     private void initDate() {
@@ -158,6 +155,7 @@ public class BillListActivity extends BaseActivity {
             }
         });
     }
+
     @OnClick({R.id.iv1, R.id.iv2})
     public void onClick(View v) {
         switch (v.getId()) {

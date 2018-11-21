@@ -1,13 +1,13 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.xgx.BaseActivity;
+import com.example.xgx.MainActivity;
+import com.example.xgx.R;
 import com.example.xgx.api.MySubscriber;
-import com.example.xgx.api.RetrofitClient;
 import com.example.xgx.api.SubscribeOnNextListener;
-import com.example.xgx.bean.BaseBean;
 import com.example.xgx.bean.UserInfo;
 
 import java.util.concurrent.TimeUnit;
@@ -15,18 +15,16 @@ import java.util.concurrent.TimeUnit;
 import butterknife.BindView;
 import butterknife.OnClick;
 import rx.Observable;
-import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.functions.Action1;
-import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 public class LoginActivity extends BaseActivity {
 
 
     @BindView(R.id.btu_get_phone_code)
-    TextView tv_code;
+    protected TextView tv_code;
 
     @Override
     protected void init() {
@@ -94,11 +92,9 @@ public class LoginActivity extends BaseActivity {
 
             case R.id.but_login:
                 toActivity(MainActivity.class);
-
                 break;
         }
 
 
     }
-
 }

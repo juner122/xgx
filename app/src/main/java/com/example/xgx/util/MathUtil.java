@@ -27,24 +27,6 @@ public class MathUtil {
         return simpleDateFormat.format(date);
     }
 
-    //显示两位小数
-    public static String toDate(int year, int month, int dayOfMonth) {
-        /**
-         * 直接用SimpleDateFormat格式化 Date对象，即可得到相应格式的日期 字符串。
-         */
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");//12小时制
-
-
-
-
-
-        Long l = 11l;
-
-
-        Date date = new Date();
-        date.setTime(l);
-        return simpleDateFormat.format(date);
-    }
 
 
 }

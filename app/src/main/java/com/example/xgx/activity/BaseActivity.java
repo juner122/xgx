@@ -1,4 +1,4 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.xgx.R;
 import com.example.xgx.api.RetrofitClient;
 
 import butterknife.BindView;
@@ -16,7 +17,7 @@ import butterknife.Unbinder;
 public abstract class BaseActivity extends AppCompatActivity {
 
     @BindView(R.id.tv_title)
-    TextView tv_title;
+    protected TextView tv_title;
 
     @BindView(R.id.head_view)
     View head_view;
@@ -83,6 +84,11 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         startActivity(new Intent(this, c));
 
+    }
+
+    protected void toActivity(Class c, Intent intent) {
+
+        startActivity(new Intent(this, c));
 
     }
 

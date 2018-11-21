@@ -1,13 +1,11 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.xgx.R;
 import com.example.xgx.api.MySubscriber;
 import com.example.xgx.api.SubscribeOnNextListener;
-import com.example.xgx.bean.BaseBean;
 import com.example.xgx.bean.MyBalanceEntity;
 import com.example.xgx.util.MathUtil;
 

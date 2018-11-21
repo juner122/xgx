@@ -20,7 +20,7 @@ import okhttp3.ResponseBody;
 import rx.Observable;
 import rx.functions.Func1;
 
-public class RetrofitClient{
+public class RetrofitClient {
 
     private ApiService apiService;
 
@@ -59,8 +59,8 @@ public class RetrofitClient{
         Map<String, Object> map = new HashMap<>();
         map.put("X-Nideshop-Token", token);
 
-        Observable observable = apiService.getUserInfo(map).map(new HttpResultFunc<UserInfo>());
-        novate.call(observable, bodyBaseSubscriber);
+
+        novate.call(apiService.getUserInfo(map).map(new HttpResultFunc<UserInfo>()), bodyBaseSubscriber);
     }
 
 
@@ -76,8 +76,8 @@ public class RetrofitClient{
     public void getUserBalanceInfo(MySubscriber<MyBalanceEntity> bodyBaseSubscriber) {
         Map<String, Object> map = new HashMap<>();
         map.put("X-Nideshop-Token", "1");
-        Observable observable = apiService.getUserBalanceInfo(map).map(new HttpResultFunc<MyBalanceEntity>());
-        novate.call(observable, bodyBaseSubscriber);
+
+        novate.call(apiService.getUserBalanceInfo(map).map(new HttpResultFunc<MyBalanceEntity>()), bodyBaseSubscriber);
 
     }
 
@@ -93,8 +93,8 @@ public class RetrofitClient{
         map.put("limit", limit);
         map.put("sidx", sidx);
         map.put("order", order);
-        Observable observable = apiService.getUserBillList(map).map(new HttpResultFunc<BillEntity>());
-        novate.call(observable, bodyBaseSubscriber);
+
+        novate.call(apiService.getUserBillList(map).map(new HttpResultFunc<BillEntity>()), bodyBaseSubscriber);
     }
 
     /**

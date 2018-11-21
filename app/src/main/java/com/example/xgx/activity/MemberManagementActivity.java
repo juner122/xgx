@@ -1,16 +1,19 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
 
-public class TechnicianListActivity extends BaseActivity {
+import com.example.xgx.R;
+
+public class MemberManagementActivity extends BaseActivity {
 
 
     @Override
     protected void init() {
-        tv_title.setText("选择技师");
+        tv_title.setText("会员管理");
     }
 
     @Override
     protected void setUpView() {
+
 
     }
 
@@ -21,6 +24,8 @@ public class TechnicianListActivity extends BaseActivity {
 
     @Override
     public int setLayoutResourceID() {
-        return R.layout.activity_technician_list;
+        return R.layout.activity_member_management;
     }
+
+
 }

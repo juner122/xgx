@@ -23,6 +23,5 @@ public class BillListAdpter extends BaseQuickAdapter<BillEntityItem, BaseViewHol
         helper.setText(R.id.tv_order_state, item.getStatus() == "1" ? "收入" : "提现");
         helper.setText(R.id.tv_date, MathUtil.toDate(Long.parseLong(item.getCreateTime())));
         helper.setText(R.id.tv_money, String.format("￥%s", MathUtil.twoDecimal(Double.parseDouble(item.getBalance()))));
-
     }
 }

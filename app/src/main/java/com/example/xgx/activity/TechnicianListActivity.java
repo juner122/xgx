@@ -1,11 +1,14 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
-public class OrderDoneActivity extends BaseActivity {
+
+import com.example.xgx.R;
+
+public class TechnicianListActivity extends BaseActivity {
 
 
     @Override
     protected void init() {
-        tv_title.setText("完成订单");
+        tv_title.setText("选择技师");
     }
 
     @Override
@@ -20,6 +23,6 @@ public class OrderDoneActivity extends BaseActivity {
 
     @Override
     public int setLayoutResourceID() {
-        return R.layout.activity_order_done;
+        return R.layout.activity_technician_list;
     }
 }

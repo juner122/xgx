@@ -2,7 +2,7 @@ package com.example.xgx.view;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
-import android.widget.DatePicker;
+
 
 import java.util.Calendar;
 
@@ -27,13 +27,6 @@ public class DatePickerDialogUtil {
 
 
     }
-
-    public DatePickerDialogUtil getDialogUtil() {
-        return this;
-    }
-
-
-
 
     public void show(int y,int m,int d) {
 

@@ -1,10 +1,12 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioGroup;
-import android.widget.TextView;
+
+import com.example.xgx.ProductListFragment;
+import com.example.xgx.R;
 
 import butterknife.BindView;
 

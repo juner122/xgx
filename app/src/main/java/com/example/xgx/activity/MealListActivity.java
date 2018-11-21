@@ -1,7 +1,6 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
-import android.app.Activity;
-import android.os.Bundle;
+import com.example.xgx.R;
 
 public class MealListActivity extends BaseActivity {
 

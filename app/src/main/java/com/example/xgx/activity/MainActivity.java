@@ -1,7 +1,13 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
 import android.support.v4.app.Fragment;
 
+import com.example.xgx.MainFragment1;
+import com.example.xgx.MainFragment2;
+import com.example.xgx.MainFragment3;
+import com.example.xgx.MainFragment4;
+import com.example.xgx.MainFragment5;
+import com.example.xgx.R;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 

@@ -1,7 +1,9 @@
-package com.example.xgx;
+package com.example.xgx.activity;
 
 
 import android.view.View;
+
+import com.example.xgx.R;
 
 import butterknife.OnClick;
 
